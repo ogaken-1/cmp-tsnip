@@ -38,7 +38,7 @@ function source:complete(_, callback)
 end
 
 ---@param completion_item lsp.CompletionItem
----@param callback fun(completion_item: lsp.CompletedItem|nil)
+---@param callback fun(completion_item: lsp.CompletionItem|nil)
 function source:execute(completion_item, callback)
   vim.fn['tsnip#remove_suffix_word'](completion_item.label)
   vim.cmd.TSnip { completion_item.label }
