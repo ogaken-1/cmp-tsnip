@@ -13,7 +13,7 @@ function source.get_debug_name()
 end
 
 function source.get_keyword_pattern()
-  return '.'
+  return [[\k\+]]
 end
 
 ---@class tsnip.Item
